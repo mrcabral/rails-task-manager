@@ -1,0 +1,6 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p><%= link_to 'Edit this task', edit_task_path %>
+
+<p><%= @task.completed ? "It's done brother!" : "Get your ass to work!" %></p>
+
+<%= link_to 'Back', tasks_path, class: "bold" %>

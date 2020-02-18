@@ -1,0 +1,16 @@
+<%= form_for @task do |f| %>
+  <div>
+    <% if !@task.persisted? %>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= f.label :details %><br />
+    <%= f.text_field :details %><br />
+    <%= f.check_box :completed %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
